@@ -30,7 +30,7 @@ namespace CodeFights{
         static void Main(string[] args)
         {
 			string[] input = Console.ReadLine().Split(' ');
-			int[] array = Arrays.ConvertAll( input, Int32.Parse );
+			int[] array = Array.ConvertAll( input, Int32.Parse );
 			
 			Console.WriteLine( method(array) );
         }
