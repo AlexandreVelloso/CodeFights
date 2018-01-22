@@ -1,2 +1,4 @@
 *.swp
 Arcade/Intro/template\.cs
+
+*.in
