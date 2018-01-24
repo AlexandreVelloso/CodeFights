@@ -2,3 +2,5 @@
 Arcade/Intro/template\.cs
 
 *.in
+
+*.class
