@@ -66,10 +66,11 @@ public class removeKFromList{
 
     public static void main( String [] args ){
 
-        int size, value;
+        int size, k, value;
         Scanner sc = new Scanner( System.in );
 
         size = sc.nextInt();
+        k = sc.nextInt();
 
         for( int i = 0; i < size; i++ ){
             value = sc.nextInt();
@@ -79,7 +80,7 @@ public class removeKFromList{
 
         print( l );
 
-        l = removeKFromList( l, 3 );
+        l = removeKFromList( l, k );
 
         print( l );
     }
