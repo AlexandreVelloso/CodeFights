@@ -11,8 +11,6 @@ class ListNode<T>{
 
 public class removeKFromList{
 
-    private static ListNode<Integer> l = null;
-
     public static void print( ListNode<Integer> l ){
 
         System.out.print("Array [");
@@ -28,7 +26,7 @@ public class removeKFromList{
 
     }
 
-    public static void add( Integer value ){
+    public static ListNode<Integer> add( ListNode<Integer> l, Integer value ){
 
         if( l == null ){
             l = new ListNode<>( value );
@@ -41,17 +39,21 @@ public class removeKFromList{
 
             aux.next = new ListNode<>(value);
         }
+
+        return l;
     }
 
     public static ListNode<Integer> removeKFromList( ListNode<Integer> l, int k ){
 
         ListNode<Integer> aux = l;
 
+        /*
         while( aux != null && aux.value == k ){
             aux = aux.next;
         }
+        */
 
-        l = aux;
+        //l = aux;
 
         while( aux != null ){
             if( aux.next != null && aux.next.value == k ){
@@ -72,10 +74,12 @@ public class removeKFromList{
         size = sc.nextInt();
         k = sc.nextInt();
 
+        ListNode<Integer> l = null;
+
         for( int i = 0; i < size; i++ ){
             value = sc.nextInt();
 
-            add( new Integer(value) );
+            l = add( l, new Integer(value) );
         }
 
         print( l );
